@@ -1,0 +1,139 @@
+/* Reset Styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../assets/img/c6f5e558-4c41-4b83-a9c0-09db8d01c0fc.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Home Button */
+.home-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
+}
+
+.home-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* Puzzle Container */
+.puzzle-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+}
+
+.puzzle-piece {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+    cursor: grab;
+}
+
+.puzzle-piece:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+/* Puzzle Board */
+.board {
+    width: 600px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.board p {
+    text-align: center;
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Board Grid */
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2px;
+    height: 600px;
+}
+
+.board-cell {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 245, 245, 0.8);
+    border: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.board-cell:hover {
+    background: rgba(200, 200, 200, 0.6);
+}
+
+/* Board Cell Images */
+.board-cell img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.board-cell img.visible {
+    display: block;
+}
+.click-it-button {
+    padding: 12px 24px;
+    font-size: 20px;
+    color: white;
+    background: linear-gradient(135deg, #ff4081, #ff80ab);
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
+    animation: pulse 1.5s infinite;
+}
+
+.click-it-button:hover {
+    transform: scale(1.1);
+}
+
+/* Heart Pulse Animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
