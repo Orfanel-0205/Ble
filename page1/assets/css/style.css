@@ -115,6 +115,12 @@ body {
 .board-cell img.visible {
     display: block;
 }
+.button-container {
+    position:relative;
+    bottom: -25rem; /* Moves the button downward */
+    right: -30px;  /* Moves the button slightly to the right */
+    transform: translate(-50%, -50%);
+}
 .click-it-button {
     padding: 12px 24px;
     font-size: 20px;
